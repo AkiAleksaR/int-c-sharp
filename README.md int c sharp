@@ -127,5 +127,6 @@ while (broj <= 5)
 
 Petlja se izvršava dok je vrednost broj manja ili jednaka 5, i nakon svake iteracije povećava broj.
 
-
+zadaci za vezbanje
+https://github.com/AkiAleksaR/int-exercise-c-sharp
 
