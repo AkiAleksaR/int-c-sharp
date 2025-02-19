@@ -1,0 +1,131 @@
+
+🔍 Detaljno o int tipovima u C#
+int (skraćeno od integer) u C# je osnovni tip za rad sa celobrojnim vrednostima. Često se koristi za brojčane podatke koji ne uključuju decimale (npr. godine, brojevi stanica, brojevi za prebrojavanje, i sl.). Evo detaljnog pregleda kako koristiti int u C#:
+
+🛠 Deklaracija i inicijalizacija int promenljive
+1️⃣ Deklaracija i inicijalizacija int promenljive:
+int broj = 25;
+Console.WriteLine(broj); // Ispisuje: 25
+📌 Objašnjenje:
+
+Deklaracija → int broj: Ovim se deklarira promenljiva tipa int (celobrojna vrednost).
+Inicijalizacija → = 25: Promenljiva se inicijalizuje sa vrednošću 25.
+Ispis → Console.WriteLine(broj): Ova funkcija ispisuje vrednost promenljive.
+
+2️⃣ Promena vrednosti int promenljive
+int broj = 10;
+Console.WriteLine(broj);  // Ispisuje: 10
+
+broj = 20;
+Console.WriteLine(broj);  // Ispisuje: 20
+📌 Objašnjenje:
+
+Promena vrednosti → Promenljiva broj je prvo inicijalizovana sa 10, a zatim je promenjena na 20.
+
+
+3️⃣ Unos int vrednosti sa tastature
+Kada želite da korisnik unese celobrojnu vrednost, možete koristiti int.Parse() ili int.TryParse(). Evo kako:
+
+Korišćenje int.Parse()
+Console.WriteLine("Unesite broj:");
+int broj = int.Parse(Console.ReadLine());  // Pretvara unos u celobrojnu vrednost
+Console.WriteLine("Uneti broj je: " + broj);
+📌 Objašnjenje:
+
+Console.ReadLine() → Omogućava korisniku unos teksta sa tastature.
+int.Parse() → Pretvara uneseni string u celobrojnu vrednost.
+Upozorenje: Ako korisnik unese tekst koji nije validan broj (npr. slovo), doći će do greške.
+
+Korišćenje int.TryParse() (sigurnije)
+Console.WriteLine("Unesite broj:");
+string unos = Console.ReadLine();
+int broj;
+
+if (int.TryParse(unos, out broj))
+{
+    Console.WriteLine("Uneti broj je: " + broj);
+}
+else
+{
+    Console.WriteLine("Unos nije validan broj.");
+}
+📌 Objašnjenje:
+
+int.TryParse() → Ova metoda pokušava da pretvori string u celobrojnu vrednost.
+Ako konverzija uspe, vraća true, i vrednost se smešta u broj.
+Ako konverzija ne uspe (korisnik unese nevalidan broj), vraća false i ispisuje poruku o grešci.
+
+
+🔹 Rad sa int vrednostima
+1️⃣ Aritmetičke operacije
+
+int a = 10;
+int b = 5;
+
+Console.WriteLine(a + b); // Ispisuje: 15
+Console.WriteLine(a - b); // Ispisuje: 5
+Console.WriteLine(a * b); // Ispisuje: 50
+Console.WriteLine(a / b); // Ispisuje: 2
+Console.WriteLine(a % b); // Ispisuje: 0 (ostatak pri deljenju)
+📌 Objašnjenje:
+
++, -, *, /, % su osnovne aritmetičke operacije (sabiranje, oduzimanje, množenje, deljenje, i ostatak pri deljenju).
+
+
+2️⃣ Postinkrement i postdekrement (++, --
+
+int broj = 5;
+Console.WriteLine(++broj); // Ispisuje: 6 (pre inkrementa)
+Console.WriteLine(broj);   // Ispisuje: 6
+
+Console.WriteLine(broj--); // Ispisuje: 6 (posle inkrementa)
+Console.WriteLine(broj);   // Ispisuje: 5
+
+📌 Objašnjenje:
+
+++broj → Povećava vrednost promenljive za 1 pre nego što bude korišćena.
+broj++ → Prvo koristi vrednost promenljive, pa je zatim povećava za 1.
+
+3️⃣ Upotreba sa if uslovima
+int broj = 18;
+
+if (broj > 10)
+{
+    Console.WriteLine("Broj je veći od 10");
+}
+else
+{
+    Console.WriteLine("Broj je manji ili jednak 10");
+}
+📌 Objašnjenje:
+
+Koristimo int u uslovima kako bismo uporedili brojeve.
+
+
+4️⃣ int u petljama
+For petlja sa int
+int broj = 1;
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i); // Ispisuje brojeve od 1 do 5
+}
+📌 Objašnjenje:
+
+i = 1 je početna vrednost.
+i <= 5 je uslov dokle će petlja da se ponavlja.
+i++ povećava i za 1 nakon svake iteracije.
+
+
+While petlja sa int
+int broj = 1;
+while (broj <= 5)
+{
+    Console.WriteLine(broj);  // Ispisuje brojeve od 1 do 5
+    broj++;
+}
+📌 Objašnjenje:
+
+Petlja se izvršava dok je vrednost broj manja ili jednaka 5, i nakon svake iteracije povećava broj.
+
+
+
